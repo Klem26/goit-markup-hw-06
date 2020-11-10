@@ -1169,6 +1169,7 @@ img {
 }
 
 .policy-link {
+  margin-left: 4px;
   color: var(--accent-color);
   text-decoration: underline;
 }
