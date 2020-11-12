@@ -982,7 +982,7 @@ img {
   transform: translate(-50%, -50%) scale(0.5);
 }
 
-.modal {
+/* .modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -993,6 +993,20 @@ img {
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  background: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+} */
+.modal {
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  min-width: 528px;
+  min-height: 581px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1033,13 +1047,17 @@ img {
   fill: var(--accent-color);
 }
 
-.form {
+/* .form {
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 581px;
   padding: 40px;
+} */
+.form {
+  width: 100%;
+  height: 100%;
 }
 .form-contact {
   position: absolute;
@@ -1109,15 +1127,26 @@ img {
   height: 18px;
   fill: var(--title-text-color);
 }
-.comment {
+/* .comment {
   position: absolute;
   transform: translateY(37px);
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
+} */
+.comment {
+  position: relative;
+  display: block;
+  top: 37px;
+  left: 0;
+  width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 }
-.textarea {
+/* .textarea {
   position: relative;
   left: 0;
   top: 54px;
@@ -1125,6 +1154,22 @@ img {
   height: 120px;
   padding: 12px 16px;
   margin-bottom: 20px;
+  resize: none;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
+.textarea {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+
   resize: none;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1140,15 +1185,20 @@ img {
   border-radius: 4px;
 }
 
-.form-button {
+/* .form-button {
   position: relative;
   top: 100px;
   left: 164px;
 
   border: transparent;
   border-radius: 4px;
-}
+} */
 
+.form-button {
+  margin: 0 144px;
+  border: transparent;
+  border-radius: 4px;
+}
 .textarea::placeholder {
   font-size: 12px;
   line-height: 1.16;
@@ -1156,7 +1206,7 @@ img {
 
   color: rgba(117, 117, 117, 0.5);
 }
-.policy {
+/* .policy {
   position: absolute;
   top: 437px;
   left: 54px;
@@ -1170,8 +1220,19 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--primary-text-color);
-}
+} */
+.policy {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
 
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
 .policy-link {
   margin-left: 4px;
   color: var(--accent-color);
